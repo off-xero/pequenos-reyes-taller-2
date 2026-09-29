@@ -1,16 +1,31 @@
-# React + Vite
+# Taller Evaluativo N.2 de Desarrollo Web y Movil
+## Integrantes del Proyecto
+- DANIEL CORTEZ FIERRO
+- DIEGO RUBILAR GOMEZ
+- MIRKO MASSA MALDONADO
+- BENJAMIN CONCHA NAVARRO
+## Problematica Abordada
+El jardin necesita digitalizar y centralizar la informaciin que actualmente se entrega de manera fisica o mediante medios de comunicacion poco estructurados, permitiendo que los apoderados puedan acceder facilmente a ella desde Internet.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Actualmente, la comunicación entre el establecimiento y los apoderados se realiza principalmente mediante WhatsApp, comunicaciones escritas y avisos verbales, siendo las educadoras de cada nivel y la dirección las responsables de entregar y coordinar la información. Sin embargo, este sistema presenta dificultades, ya que los mensajes y documentos pueden perderse entre las conversaciones y algunos apoderados pueden no revisar la información oportunamente.
+## Usuario Objetivo
+Un colegio de lenguaje que busca convertir su sistema de comunicacion en un sistema digital
+## Funcionalidades Principales
+EDITAR
+## Tecnologias Utilizadas
+Principalmente se usa Github para tener un repositorio para este proyecto. 
+Tambien se utiliza lenguajes de programacion como Javascript o Bootstrap para otorgarle al proyecto un mejor diseño y mas amigable.
+## Instrucciones de Uso
+Hasta ahora no se presentan intruccion de uso mas alla del Frontend solicitado que hemos creado para mostrar un avance de este proyecto.
+## Estructura general de la aplicación
+EDITAR
+## API pública utilizada y documentación oficial
+EDITAR
+## Endpoint(s) utilizados.
+EDITAR
+## Justificación funcional de la API
+EDITAR
+## Uso de Inteligencia Artificial 
+EDITAR
+## Limitaciones conocidas
+EDITAR
