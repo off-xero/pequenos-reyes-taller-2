@@ -20,8 +20,8 @@ function ComunicadosBoard({ comunicados = [] }) {
           lo verá aquí.
         </p>
       ) : (
-        {/* Renderiza una tarjeta por cada comunicado ordenado. */}
         <div className="muro__lista">
+          {/* Renderiza una tarjeta por cada comunicado ordenado. */}
           {ordenados.map((comunicado) => (
             <ComunicadoCard
               key={comunicado.id}
