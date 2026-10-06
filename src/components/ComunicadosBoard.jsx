@@ -4,6 +4,7 @@ import { ordenarComunicados } from '../services/comunicados.js'
 import '../App.css'
 
 function ComunicadosBoard({ comunicados = [] }) {
+  // Memoriza el resultado para evitar ordenar nuevamente mientras cambian otras partes de la vista.
   const ordenados = useMemo(() => ordenarComunicados(comunicados), [comunicados])
 
   return (
@@ -12,12 +13,14 @@ function ComunicadosBoard({ comunicados = [] }) {
         Comunicados oficiales
       </h2>
 
+      {/* Informa cuando todavía no existen comunicados para mostrar. */}
       {ordenados.length === 0 ? (
         <p className="muro__vacio" role="status">
           Por ahora no hay comunicados publicados. Cuando el jardín envíe uno,
           lo verá aquí.
         </p>
       ) : (
+        {/* Renderiza una tarjeta por cada comunicado ordenado. */}
         <div className="muro__lista">
           {ordenados.map((comunicado) => (
             <ComunicadoCard

@@ -1,5 +1,6 @@
 const FORMATO_FECHA = /^(\d{4})-(\d{2})-(\d{2})$/
 
+// Convierte una fecha con formato AAAA-MM-DD en un objeto Date válido.
 export function parseFecha(valor) {
   if (typeof valor !== 'string') return null
 
@@ -11,6 +12,7 @@ export function parseFecha(valor) {
   const dia = Number(partes[3])
   const fecha = new Date(anio, mes - 1, dia)
 
+  // Date ajusta automáticamente fechas imposibles, por eso se comparan sus partes.
   const esUnaFechaValida =
     fecha.getFullYear() === anio &&
     fecha.getMonth() === mes - 1 &&
@@ -20,6 +22,7 @@ export function parseFecha(valor) {
   return fecha
 }
 
+// Devuelve la fecha en un formato largo y legible para la interfaz.
 export function formatearFecha(valor) {
   const fecha = parseFecha(valor)
   if (!fecha) return null
@@ -27,11 +30,13 @@ export function formatearFecha(valor) {
   return new Intl.DateTimeFormat('es-CL', { dateStyle: 'long' }).format(fecha)
 }
 
+// Ordena los comunicados del más reciente al más antiguo.
 export function ordenarComunicados(comunicados) {
   if (!Array.isArray(comunicados)) return []
 
   const comunicadosOrdenados = [...comunicados]
 
+  // Los comunicados sin una fecha válida quedan después de los que sí tienen fecha.
   comunicadosOrdenados.sort((primerComunicado, segundoComunicado) => {
     const fechaPrimerComunicado = parseFecha(primerComunicado?.fecha)
     const fechaSegundoComunicado = parseFecha(segundoComunicado?.fecha)

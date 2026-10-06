@@ -9,6 +9,7 @@ function ComunicadoCard({
   categoria,
   esUrgente = false,
 }) {
+  // Prepara los datos calculados que se necesitan para mostrar la tarjeta.
   const fechaFormateada = formatearFecha(fecha)
   const claseComunicado = esUrgente
     ? 'comunicado comunicado--urgente'
@@ -17,6 +18,7 @@ function ComunicadoCard({
   return (
     <article className={claseComunicado}>
       <header className="comunicado__cabecera">
+        {/* Las etiquetas solo aparecen cuando el comunicado tiene esos atributos. */}
         {esUrgente && <span className="comunicado__etiqueta">Urgente</span>}
         {categoria && <span className="comunicado__categoria">{categoria}</span>}
       </header>
@@ -25,6 +27,7 @@ function ComunicadoCard({
       <p className="comunicado__cuerpo">{cuerpo}</p>
 
       <footer className="comunicado__pie">
+        {/* Si la fecha no se puede interpretar, se informa al usuario. */}
         {fechaFormateada ? (
           <time dateTime={fecha}>{fechaFormateada}</time>
         ) : (
